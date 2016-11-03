@@ -71,11 +71,17 @@ function render() {
 // Colocar todos objetos nessa funcao
 function criarObjetos() {
 
+  // Grid
+  var gridHelper = new THREE.GridHelper(40, 40);
+  scene.add(gridHelper);
+
   // Chao
   material = new THREE.MeshBasicMaterial({
-    color: 0x918b82
+    color: 0x918b82,
+    transparent: true,
+    opacity: 0.5
   });
-  criarCubo(5, 0, 5, 10, 0.1, 15, material).mass = 0;
+  criarCubo(0, 0, 0, 80, 0.1, 80, material).mass = 0;
 }
 
 // Cria um cubo
@@ -141,7 +147,7 @@ function addCaixa(largura, altura, profundidade, cor) {
     color: cor
   });
 
-  objetos.push(criarCubo(6, 1, 6, largura, altura, profundidade, material));
+  objetos.push(criarCubo(6, 2, 6, largura, altura, profundidade, material));
 }
 
 // Adiciona um container na scene
