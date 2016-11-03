@@ -71,30 +71,6 @@ function render() {
 // Colocar todos objetos nessa funcao
 function criarObjetos() {
 
-  var material = new THREE.MeshBasicMaterial({
-    color: 0x00ff00
-  });
-  objetos.push(criarCubo(5, 10, 10, 1, 1, 1, material));
-
-  material = new THREE.MeshBasicMaterial({
-    color: 0xff0000
-  });
-  objetos.push(criarCubo(5, 5, 5, 1, 1, 1, material));
-
-  material = new THREE.MeshBasicMaterial({
-    color: 0x0000ff
-  });
-  objetos.push(criarCubo(3, 2, 1, 2, 2, 2, material));
-
-  // Crair chao
-  material = new THREE.MeshBasicMaterial({
-    opacity: 0.5,
-    color: 0x44ff44,
-    transparent: true
-  });
-
-  criarContainner(5, 0.1, 5, 3, 5, 5, material);
-
   // Chao
   material = new THREE.MeshBasicMaterial({
     color: 0x918b82
